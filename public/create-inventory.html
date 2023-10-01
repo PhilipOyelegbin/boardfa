@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project: Create Inventory</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Final Project</h1>
+
+    <nav>
+      <a href="inventory.html">Inventory</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="inventoryForm" autocomplete="off">
+      <h3>Create a new inventory...</h3>
+      <div class="form-control">
+        <label for="product_name">Product name</label>
+        <input type="text" name="product_name" id="product_name" placeholder="Enter your product name" required>
+      </div>
+      <div class="form-control">
+        <label for="price">Price</label>
+        <input type="text" name="price" id="price" placeholder="Enter your price" required>
+      </div>
+      <div class="form-control">
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="5" placeholder="Enter your description" required></textarea>
+      </div>
+      <div class="form-footer">
+        <button type="submit">Add Inventory</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>Created by <b>Philip Oyelegbin</b>, contact: <a href="http://linkedin.com/in/philipoyelegbin" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+  </footer>
+
+  <script src="./js/inventory.js"></script>
+</body>
+</html>

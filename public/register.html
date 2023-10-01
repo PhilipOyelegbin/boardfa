@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project: Register</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main>
+    <form id="registrationForm" autocomplete="off">
+      <h3>Create a new account...</h3>
+      <div class="form-control">
+        <label for="first_name">First name</label>
+        <input type="text" name="first_name" id="first_name" placeholder="Enter your first name" required>
+      </div>
+      <div class="form-control">
+        <label for="last_name">Last name</label>
+        <input type="text" name="last_name" id="last_name" placeholder="Enter your last name" required>
+      </div>
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <div class="form-footer">
+        <button type="submit">Sign Up</button>
+        <p>Already have an account? <a href="index.html">Sign In</a></p>
+      </div>
+    </form>
+  </main>
+
+  <script src="./js/register.js"></script>
+</body>
+</html>
