@@ -2,7 +2,7 @@
 var token = sessionStorage.getItem("token")
 
 function inventory() {
-  fetch("http://localhost:4000/api/v1/inventory", {
+  fetch("https://boardfa.vercel.app/api/v1/inventory", {
     headers: {
     'Content-Type': 'application/json',
     "Authorization": token
@@ -41,7 +41,7 @@ document.getElementById('inventoryForm').addEventListener('submit', function(eve
 
   const inventoryData = {product_name, price, description}
 
-  fetch("http://localhost:4000/api/v1/inventory", {
+  fetch("https://boardfa.vercel.app/api/v1/inventory", {
     method: "POST",
     headers: {
     'Content-Type': 'application/json',

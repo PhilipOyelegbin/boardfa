@@ -7,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
   const userData = {email, password}
 
-  fetch("http://localhost:4000/auth/login", {
+  fetch("https://boardfa.vercel.app/auth/login", {
     method: "POST",
     headers: {
     'Content-Type': 'application/json'

@@ -9,7 +9,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
   const userData = {first_name, last_name, email, password}
 
-  fetch("http://localhost:4000/auth/register", {
+  fetch("https://boardfa.vercel.app/auth/register", {
     method: "POST",
     headers: {
     'Content-Type': 'application/json'
