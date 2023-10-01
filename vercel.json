@@ -1,0 +1,5 @@
+{
+  "routes": [
+    { "src": "/src/(.*)", "dest": "https://inventory-api" }
+  ]
+}
