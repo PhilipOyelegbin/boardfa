@@ -32,7 +32,7 @@ app.use(cors({origin: ["http://localhost:4000/*", "https://boardfa.vercel.app/*"
 
 // Routes
 app.get("/", () => {
-  res.status(200).sendFile(__dirname, "/public/index.html")
+  res.status(200).sendFile(__dirname + "/public/index.html")
 })
 
 app.use("/auth", authRouter)
