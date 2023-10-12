@@ -25,15 +25,15 @@ var options = {
 
 // middleware
 app.use(express.json())
-app.use(express.static('public', options))
+//app.use(express.static('public', options))
 app.use(express.urlencoded({extended: false}))
 app.use(helmet())
 app.use(cors({origin: ["http://localhost:4000/*", "https://boardfa.vercel.app/*"]}))
 
 // Routes
-//app.get("/", (req, res) => {
-//  res.status(200).sendFile(__dirname + "/public/index.html")
-//})
+app.get('/', (req, res) => {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+});
 
 app.use("/auth", authRouter)
 app.use("/api/v1/users", userRouter)
