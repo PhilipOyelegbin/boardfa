@@ -11,9 +11,21 @@ const verifyToken = require("./src/authentication/auth.middleware")
 
 const app = express()
 
+var options = {
+  dotfiles: 'ignore',
+  etag: false,
+  extensions: ['htm', 'html'],
+  index: "index.html",
+  maxAge: '1d',
+  redirect: false,
+  setHeaders: function (res, path, stat) {
+    res.set('x-timestamp', Date.now())
+  }
+}
+
 // middleware
 app.use(express.json())
-app.use(express.static("public"))
+app.use(express.static("public", options))
 app.use(express.urlencoded({extended: false}))
 app.use(helmet())
 app.use(cors({origin: ["http://localhost:4000/*"]}))
