@@ -25,10 +25,10 @@ var options = {
 
 // middleware
 app.use(express.json())
-app.use(express.static("public", options))
+app.use(express.static(path.join(__dirname, 'public'), options))
 app.use(express.urlencoded({extended: false}))
 app.use(helmet())
-app.use(cors({origin: ["http://localhost:4000/*"]}))
+app.use(cors({origin: ["http://localhost:4000/*", "https://boardfa.vercel.app/*"]}))
 
 // Routes
 app.use("/auth", authRouter)
