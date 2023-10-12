@@ -14,8 +14,8 @@ const app = express()
 var options = {
   dotfiles: 'ignore',
   etag: false,
-  extensions: ['htm', 'html'],
-  index: "index.html",
+  extensions: ['html', 'htm'],
+  index: false,
   maxAge: '1d',
   redirect: false,
   setHeaders: function (res, path, stat) {
