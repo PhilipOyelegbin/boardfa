@@ -31,7 +31,7 @@ app.use(helmet())
 app.use(cors({origin: ["http://localhost:4000/*", "https://boardfa.vercel.app/*"]}))
 
 // Routes
-app.get("/", () => {
+app.get("/", (req, res) => {
   res.status(200).sendFile(__dirname + "/public/index.html")
 })
 
