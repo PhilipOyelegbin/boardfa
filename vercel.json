@@ -1,8 +1,25 @@
 {
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "app.js"
-        }
-    ]
+  "name": "express-fullstack-board-final-project",
+  "version": 2,
+  "public": true,
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/((?!.*\\.\\w+$).*)",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/(.+\\.[a-z]+)$",
+      "dest": "/public/$1"
+    }
+  ]
 }
